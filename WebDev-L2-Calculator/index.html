@@ -1,0 +1,380 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+ 
+    <title>Calcora Scientific</title> 
+ 
+    <link rel="stylesheet" href="style.css"> 
+</head> 
+ 
+<body> 
+ 
+<div class="app"> 
+ 
+    <!-- HEADER --> 
+    <header class="header"> 
+ 
+        <div class="logo-area"> 
+            <div class="logo">C</div> 
+ 
+            <div> 
+                <h1>Calcora Scientific</h1> 
+                <p>Precision calculator</p> 
+            </div> 
+        </div> 
+ 
+        <button id="themeBtn" class="theme-btn" type="button"> 
+            ☾ 
+        </button> 
+ 
+    </header> 
+ 
+ 
+    <!-- MAIN --> 
+    <main class="workspace"> 
+ 
+        <!-- CALCULATOR --> 
+        <section class="calculator-section"> 
+ 
+            <!-- MODE --> 
+            <div class="mode-switch"> 
+ 
+                <button 
+                    id="basicBtn" 
+                    class="mode active" 
+                    type="button" 
+                > 
+                    BASIC 
+                </button> 
+ 
+                <button 
+                    id="scientificBtn" 
+                    class="mode" 
+                    type="button" 
+                > 
+                    SCIENTIFIC 
+                </button> 
+ 
+            </div> 
+ 
+ 
+            <div class="calculator"> 
+ 
+                <!-- DISPLAY --> 
+                <div class="display"> 
+ 
+                    <div class="display-top"> 
+ 
+                        <span id="expression"> 
+                            0 
+                        </span> 
+ 
+                        <button 
+                            id="copyBtn" 
+                            class="copy-btn" 
+                            type="button" 
+                        > 
+                            ⧉ 
+                        </button> 
+ 
+                    </div> 
+ 
+ 
+                    <div 
+                        id="result" 
+                        class="result" 
+                    > 
+                        0 
+                    </div> 
+ 
+ 
+                    <div class="display-bottom"> 
+ 
+                        <span> 
+                            <i></i> 
+                            <span id="status"> 
+                                Ready 
+                            </span> 
+                        </span> 
+ 
+                        <span class="degree"> 
+                            DEG 
+                        </span> 
+ 
+                    </div> 
+ 
+                </div> 
+ 
+ 
+                <!-- ERROR --> 
+                <div 
+                    id="error" 
+                    class="error" 
+                > 
+                    <strong id="errorTitle"> 
+                        Error 
+                    </strong> 
+ 
+                    <span id="errorMessage"> 
+                        Check your expression. 
+                    </span> 
+                </div> 
+ 
+ 
+                <!-- SCIENTIFIC --> 
+                <div 
+                    id="scientificPanel" 
+                    class="scientific-panel hidden" 
+                > 
+ 
+                    <div class="scientific-group"> 
+ 
+                        <label>TRIGONOMETRY</label> 
+ 
+                        <div class="scientific-grid"> 
+ 
+                            <button data-scientific="sin"> 
+                                sin 
+                            </button> 
+ 
+                            <button data-scientific="cos"> 
+                                cos 
+                            </button> 
+ 
+                            <button data-scientific="tan"> 
+                                tan 
+                            </button> 
+ 
+                            <button data-scientific="asin"> 
+                                sin⁻¹ 
+                            </button> 
+ 
+                            <button data-scientific="acos"> 
+                                cos⁻¹ 
+                            </button> 
+ 
+                            <button data-scientific="atan"> 
+                                tan⁻¹ 
+                            </button> 
+ 
+                        </div> 
+ 
+                    </div> 
+ 
+ 
+                    <div class="scientific-group"> 
+ 
+                        <label>MATHEMATICS</label> 
+ 
+                        <div class="scientific-grid"> 
+ 
+                            <button data-scientific="sqrt"> 
+                                √ 
+                            </button> 
+ 
+                            <button data-scientific="square"> 
+                                x² 
+                            </button> 
+ 
+                            <button data-scientific="power"> 
+                                xʸ 
+                            </button> 
+ 
+                            <button data-scientific="ln"> 
+                                ln 
+                            </button> 
+ 
+                            <button data-scientific="log"> 
+                                log 
+                            </button> 
+ 
+                            <button data-scientific="factorial"> 
+                                x! 
+                            </button> 
+ 
+                        </div> 
+ 
+                    </div> 
+ 
+ 
+                    <div class="scientific-group"> 
+ 
+                        <label>CONSTANTS & SYMBOLS</label> 
+ 
+                        <div class="scientific-grid"> 
+ 
+                            <button data-scientific="pi"> 
+                                π 
+                            </button> 
+ 
+                            <button data-scientific="e"> 
+                                e 
+                            </button> 
+ 
+                            <button data-scientific="left"> 
+                                ( 
+                            </button> 
+ 
+                            <button data-scientific="right"> 
+                                ) 
+                            </button> 
+ 
+                            <button data-scientific="percent"> 
+                                % 
+                            </button> 
+ 
+                            <button data-scientific="negative"> 
+                                ± 
+                            </button> 
+ 
+                        </div> 
+ 
+                    </div> 
+ 
+                </div> 
+ 
+ 
+                <!-- MOBILE SCIENTIFIC --> 
+                <button 
+                    id="mobileScientific" 
+                    class="mobile-scientific" 
+                    type="button" 
+                > 
+                    SCIENTIFIC FUNCTIONS 
+                    <span>+</span> 
+                </button> 
+ 
+ 
+                <!-- KEYPAD --> 
+                <div class="keypad"> 
+ 
+                    <button 
+                        id="clearBtn" 
+                        class="utility" 
+                        type="button" 
+                    > 
+                        AC 
+                    </button> 
+ 
+                    <button 
+                        id="backspaceBtn" 
+                        class="utility" 
+                        type="button" 
+                    > 
+                        ⌫ 
+                    </button> 
+ 
+                    <button 
+                        id="percentBtn" 
+                        class="utility" 
+                        type="button" 
+                    > 
+                        % 
+                    </button> 
+ 
+                    <button 
+                        class="operator" 
+                        data-key="÷" 
+                        type="button" 
+                    > 
+                        ÷ 
+                    </button> 
+ 
+ 
+                    <button data-key="7">7</button> 
+                    <button data-key="8">8</button> 
+                    <button data-key="9">9</button> 
+ 
+                    <button 
+                        class="operator" 
+                        data-key="×" 
+                        type="button" 
+                    > 
+                        × 
+                    </button> 
+ 
+ 
+                    <button data-key="4">4</button> 
+                    <button data-key="5">5</button> 
+                    <button data-key="6">6</button> 
+ 
+                    <button 
+                        class="operator" 
+                        data-key="−" 
+                        type="button" 
+                    > 
+                        − 
+                    </button> 
+ 
+ 
+                    <button data-key="1">1</button> 
+                    <button data-key="2">2</button> 
+                    <button data-key="3">3</button> 
+ 
+                    <button 
+                        class="operator" 
+                        data-key="+" 
+                        type="button" 
+                    > 
+                        + 
+                    </button> 
+ 
+ 
+                    <button data-key="0">0</button> 
+ 
+                    <button data-key="."> 
+                        . 
+                    </button> 
+ 
+                    <button 
+                        id="equalsBtn" 
+                        class="equals" 
+                        type="button" 
+                    > 
+                        = 
+                    </button> 
+ 
+                </div> 
+ 
+            </div> 
+ 
+        </section> 
+ 
+ 
+        <!-- HISTORY --> 
+        <aside class="history"> 
+ 
+            <div class="history-heading"> 
+ 
+                <div> 
+                    <h2>History</h2> 
+                    <p>Recent calculations</p> 
+                </div> 
+ 
+                <button 
+                    id="clearHistory" 
+                    type="button" 
+                > 
+                    Clear all 
+                </button> 
+ 
+            </div> 
+ 
+ 
+            <div id="historyList"> 
+ 
+            </div> 
+ 
+        </aside> 
+ 
+    </main> 
+ 
+</div> 
+ 
+ 
+<script src="app.js"></script> 
+ 
+</body> 
+</html>
